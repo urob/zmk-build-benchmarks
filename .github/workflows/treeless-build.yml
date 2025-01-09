@@ -1,0 +1,11 @@
+name: Build ZMK firmware (treeless)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - config/**
+      - build.yaml
+
+jobs:
+  build:
+    uses: urob/zmk/.github/workflows/build-user-config.yml@optimize-build-workflow
